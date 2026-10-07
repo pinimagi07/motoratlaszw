@@ -1,1 +1,7 @@
-const vehicleViews={};
+const vehicleViews={
+ 'mb-c-w204':{exterior:{uid:'c91f15e9518f4dd2b7574002778cfc28',title:'Mercedes-Benz C-Class W204 (2007–2014)',author:'Merc_TV',url:'https://sketchfab.com/3d-models/mercedes-benz-c-class-mk3-w204-2007-2014-c91f15e9518f4dd2b7574002778cfc28',note:'W204 exterior reference. The exact engine, trim and equipment are not verified.'}},
+ 'mb-e-w212':{exterior:{uid:'e86ac95cbfa1448b8246950450757a0d',title:'Mercedes E-Class W212',author:'RES1N',url:'https://sketchfab.com/3d-models/mercedes-e-class-w212-e86ac95cbfa1448b8246950450757a0d',note:'W212 exterior reference; exact trim and equipment may differ.'}},
+ 'mb-glc-c253':{exterior:{uid:'49092f9184f84c15abc2b25d298617d5',title:'2019 Mercedes-Benz GLC C253 Coupé AMG-Line',author:'naveennunnaguppala',url:'https://sketchfab.com/3d-models/mercedes-benz-glc-class-3d-model-49092f9184f84c15abc2b25d298617d5',note:'2019 C253 AMG-Line exterior reference; not the current GLC Coupé.'}},
+ 'mb-s-w222':{interior:{uid:'c2fe0916576241b385ef4845bb916b61',title:'Mercedes-Benz S-Class W222 HQ Interior',author:'Nieve5677 (@niev)',url:'https://sketchfab.com/3d-models/mercedes-benz-s-class-mk6w222-hq-interior-c2fe0916576241b385ef4845bb916b61',note:'Detailed W222 cabin reference; not the current S-Class. Large model, approximately 3.3 million triangles. Steering side and equipment may differ from your car.'}},
+ 'raptor-2019':{exterior:{uid:'c2d4113e6acd401cb1999f81bb318325',title:'2019 Ford Ranger Raptor CIVIL',author:'TSB3DMODELS',url:'https://sketchfab.com/3d-models/2019-ford-ranger-raptor-civil-cities-skylines-c2d4113e6acd401cb1999f81bb318325',note:'Stylised low-poly 2019 exterior reference. Not the newer V6 Raptor or an exact equipment model.'}}
+};
