@@ -1,2 +1,2 @@
 Trigger Cloudflare Pages redeploy for Motor Atlas step-by-step restore.
-Latest requested deploy: data.js restoration.
+Latest requested deploy: mercedes-data.js restoration.
