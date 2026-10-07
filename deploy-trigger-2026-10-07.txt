@@ -1,1 +1,2 @@
-Trigger Cloudflare Pages redeploy for MAGAYA download update.
+Trigger Cloudflare Pages redeploy for Motor Atlas step-by-step restore.
+Latest requested deploy: style.css restoration.
