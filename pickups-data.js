@@ -5,25 +5,5 @@ const pickups=[
  {id:'raptor-2019',make:'Ford',model:'Ranger Raptor',year:2019,type:'Pickup',trim:'2.0 Bi-Turbo diesel · 10AT',fuel:'Diesel',drive:'4WD',power:157,torque:'500 Nm',rating:null,review:null,market:'South Africa · 2019 launch reference',summary:'The original South African diesel Raptor, offered here separately from the newer petrol V6.',note:'2019 launch specification. The available exterior model is a stylised low-poly representation of a 2019 Raptor, not an exact trim or equipment reference. Interior 3D is unavailable.',image:'assets/raptor-2019.jpg',imageAlt:'Ford Ranger Raptor 2019 reference photo',groups:{'Engine & drivetrain':{'Engine':'2.0-litre four-cylinder bi-turbo diesel','Power':'157 kW','Torque':'500 Nm','Transmission':'10-speed automatic','Drive':'Four-wheel drive'},'Model identification':{'Reference year':'2019','Body':'Double-cab pickup','Generation':'Earlier diesel Raptor','3D reference':'Stylised 2019 exterior; not a manufacturer model'}},sources:[['Cars.co.za — 2019 Ranger Raptor launch specifications','https://www.cars.co.za/motoring-news/ford-ranger-raptor-2019-specs--price/30928/']],collection:'Pickups',keywords:'raptor 2.0 diesel biturbo'}
 ];
 
+// Pickups and Mercedes-Benz entries join the same master catalogue array.
 cars.unshift(...pickups,...mercedesCars);
-
-// Load the BMW add-on after the existing catalogue data is ready.
-(()=>{if(!document.querySelector('script[data-motoratlas-bmw]')){const s=document.createElement('script');s.src='bmw-addon/bmw.js';s.dataset.motoratlasBmw='1';document.head.appendChild(s)}})();
-
-// Responsive enhancement layer. Kept separate so the original Motor Atlas
-// styling and catalogue logic remain untouched and easy to maintain.
-(()=>{
-  if(!document.getElementById('motorAtlasResponsiveCSS')){
-    const l=document.createElement('link');
-    l.id='motorAtlasResponsiveCSS';
-    l.rel='stylesheet';
-    l.href='responsive.css';
-    document.head.appendChild(l);
-  }
-  if(!document.querySelector('script[data-motoratlas-responsive]')){
-    const s=document.createElement('script');
-    s.src='responsive.js';
-    s.dataset.motoratlasResponsive='1';
-    document.head.appendChild(s);
-  }
-})();
