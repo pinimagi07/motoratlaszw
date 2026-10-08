@@ -1,2 +1,100 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Motor Atlas — Zimbabwe car guide</title><meta name="description" content="Explore car specifications and sourced expert ratings. A curated guide for Zimbabwe's car enthusiasts."><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="views.css"><style>.quick-download{position:fixed;right:14px;bottom:14px;width:30px;height:30px;border:1px solid #34383b;border-radius:50%;display:grid;place-items:center;background:#151719;color:#777b7d;opacity:.34;z-index:999;font:600 15px/1 Arial,sans-serif;box-shadow:none;transition:opacity .18s,border-color .18s,color .18s,background .18s}.quick-download:hover,.quick-download:focus-visible{opacity:.9;color:#dcf86a;border-color:#59605f;background:#1b1e20}.quick-download:disabled{opacity:.18;cursor:wait}</style></head><body><header><a class="brand" href="./"><span class="mark">M<span>∕</span></span> MOTOR ATLAS<span class="edition">ZIMBABWE</span></a><nav><a href="#jdm">Trim catalogue</a><a href="#catalogue">Explore cars</a><button id="ratingsInfo">About the ratings</button></nav><span class="regional">ZW <span> / </span> KM · kW</span></header><main><div class="intro"><div><div class="eyebrow">THE CAR SPECIFICATION GUIDE</div><h1>Know what drives you<span>.</span></h1><p>Explore the specs. Step inside. Find your next car.</p></div><div class="index-note"><strong id="modelTotal">1,938</strong><span>CATALOGUE ENTRIES<br>Specs. Expert ratings. No guesswork.</span></div></div><div class="section-title browse-heading"><h2>Find your next fascination.</h2><span id="catalogueSubtitle">Model guides, reference variants & interactive views</span></div>
-<section id="catalogue" aria-label="Car catalogue"><div class="collection-switch" role="group" aria-label="Browse a collection"><button class="active" data-collection="All" aria-pressed="true">All cars</button><button data-collection="Current Mercedes-Benz" aria-pressed="false">Mercedes-Benz · current</button><button data-collection="Used Mercedes-Benz" aria-pressed="false">Mercedes-Benz · used</button><button data-collection="Pickups" aria-pressed="false">GD-6 & pickups</button><button data-collection="3D" aria-pressed="false">↻ 3D collection</button></div><div class="toolbar"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search make, model or engine…" aria-label="Search cars"></label><label class="selectlabel">Make<select id="make"><option value="all">All manufacturers</option><option>Toyota</option><option>Ford</option><option>Suzuki</option><option>Honda</option><option>Isuzu</option><option>Mazda</option><option>Nissan</option></select></label><label class="selectlabel">Sort by<select id="sort"><option value="featured">Featured</option><option value="rating">Expert rating</option><option value="power">Power: high to low</option><option value="name">Name: A–Z</option></select></label></div><div class="filterline"><div id="types" class="tabs"><button class="active" data-type="All" aria-pressed="true">All cars <span id="allTotal">12</span></button><button data-type="Pickup" aria-pressed="false">Pickups</button><button data-type="SUV" aria-pressed="false">SUVs</button><button data-type="Hatchback" aria-pressed="false">Hatchbacks</button></div><span id="count" aria-live="polite">12 cars to explore</span></div><div class="scope"><span>CATALOGUE NOTES</span> Mercedes-Benz current model families and selected used imports, Hilux GD-6 and Ranger Raptor. Family guides show trim-dependent fields clearly. Click a car to explore specifications and available 3D views.</div><div id="grid" class="grid"></div><div class="load-more-wrap"><button id="loadMore" class="view" hidden>Show more</button></div><div id="empty" class="empty" hidden><h2>No matching cars</h2><p>Try another model, make or body type.</p><button id="reset">Reset filters</button></div></section><section id="jdm" class="jdm-section" aria-labelledby="jdm-title"><div class="section-title"><div><div class="eyebrow">JAPANESE MODEL ARCHIVE</div><h2 id="jdm-title">Find your exact trim.</h2></div><span>1,926 catalogue entries · 4 model families</span></div><div class="family-grid"><button class="family active" data-family="Serena" aria-pressed="true"><img src="assets/serena.jpg" alt="Nissan Serena C25 reference photo"><span><small>NISSAN</small><b>Serena</b><em>1,431 entries · 1994–2026</em></span></button><button class="family" data-family="Mark II" aria-pressed="false"><img src="assets/markii.jpg" alt="Toyota Mark II JZX100 reference photo"><span><small>TOYOTA</small><b>Mark II</b><em>290 entries · 1989–2004</em></span></button><button class="family" data-family="Mark X" aria-pressed="false"><img src="assets/markx.jpg" alt="Second-generation Toyota Mark X reference photo"><span><small>TOYOTA</small><b>Mark X</b><em>115 entries · 2004–2019</em></span></button><button class="family" data-family="Funcargo" aria-pressed="false"><img src="assets/funcargo.jpg" alt="2004 Toyota Funcargo reference photo"><span><small>TOYOTA</small><b>Funcargo</b><em>90 entries · 1999–2004</em></span></button></div><div class="trim-panel"><div class="trim-heading"><h3 id="trimTitle">Serena trim catalogue</h3><span id="trimCount" aria-live="polite"></span></div><div class="trim-controls"><label class="search"><input id="trimSearch" type="search" placeholder="Search trim, chassis code or engine…" aria-label="Search individual trims"></label><label class="selectlabel">Generation<select id="trimGeneration"><option value="">All generations</option></select></label><label class="selectlabel">Release / start year<select id="trimYear"><option value="">All years</option></select></label><label class="selectlabel">Drive<select id="trimDrive"><option value="">All drivetrains</option></select></label></div><p id="trimCoverage" class="coverage-note"></p><div class="tablewrap"><table class="trim-table"><thead><tr><th scope="col">Trim / edition</th><th scope="col">Year / period</th><th scope="col">Chassis</th><th scope="col">Engine</th><th scope="col">Drive</th><th scope="col">Details</th></tr></thead><tbody id="trimRows"></tbody></table></div><div id="trimEmpty" class="empty" hidden><h3>No matching trims</h3><p>Try another year, chassis code or trim name.</p><button id="trimReset">Reset trim filters</button></div><div class="trim-pages"><button id="trimPrev" class="view">Previous</button><span id="trimPage" aria-live="polite"></span><button id="trimNext" class="view">Next</button></div><p class="coverage-note">Every entry listed in the linked source snapshots is included, with separate dates and drivetrain variants retained. This is not a guarantee of every trim ever produced. Photos represent each family, not every trim. Earlier Mark II and Serena records are not covered. Expert scores are unavailable for these exact trims.</p></div></section><footer><div class="brand">MOTOR ATLAS <span class="edition">ZIMBABWE</span></div><p>Independent specification guide · Catalogue updated 5 October 2026<br>Mercedes-Benz model guides, GD-6 & Raptor references, and 1,926 Japanese trim entries. Licensed 3D references where available; exact trims and local equipment can differ.</p><button id="sourcesInfo">Sources & rating methodology</button></footer></main><div id="comparebar" class="comparebar" hidden><div><b id="selectedCount"></b><span>Compare the details, side by side</span></div><div><button id="clearCompare">Clear</button><button id="compareNow" class="accent">Compare cars</button></div></div><dialog id="dialog" aria-labelledby="dialogLabel"><div class="dialogtop"><span id="dialogLabel">VEHICLE DETAILS</span><button id="closeDialog" aria-label="Close dialog">✕</button></div><div id="dialogContent"></div></dialog><script src="data.js"></script><script src="mercedes-data.js"></script><script src="pickups-data.js"></script><script src="views-data.js"></script><script src="app.js"></script><script src="jdm-data.js"></script><script src="jdm.js"></script><button id="quickDownload" class="quick-download" type="button" aria-label="Quick download" title="Quick download">↓</button><script>document.addEventListener('DOMContentLoaded',()=>{const b=document.getElementById('quickDownload');if(!b)return;b.addEventListener('click',async()=>{if(b.disabled)return;const o=b.textContent;b.disabled=true;b.textContent='·';const p=['part01.bin','part02.bin','part03.bin','part04a.bin','part04b.bin','part05.bin','part06.bin','part07.bin','part08.bin','part09.bin','part10.bin','part11.bin','part12.bin','part13.bin','part14.bin'];try{const c=[];for(const f of p){const r=await fetch('./downloads/magaya/'+f);if(!r.ok)throw new Error('unavailable');c.push(await r.arrayBuffer())}const x=new Blob(c,{type:'application/vnd.rar'}),u=URL.createObjectURL(x),a=document.createElement('a');a.href=u;a.download='MAGAYA.rar';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);b.textContent='✓';setTimeout(()=>{b.textContent=o;b.disabled=false},1200)}catch(e){console.error(e);b.textContent='!';b.disabled=false}})})</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motor Atlas — Zimbabwe car guide</title>
+  <meta name="description" content="Explore car specifications and sourced expert ratings. A curated guide for Zimbabwe's car enthusiasts.">
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="views.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="catalogue.css">
+  <style>
+    .quick-download{position:fixed;right:14px;bottom:14px;width:30px;height:30px;border:1px solid #34383b;border-radius:50%;display:grid;place-items:center;background:#151719;color:#777b7d;opacity:.34;z-index:999;font:600 15px/1 Arial,sans-serif;box-shadow:none;transition:opacity .18s,border-color .18s,color .18s,background .18s}.quick-download:hover,.quick-download:focus-visible{opacity:.9;color:var(--lime);border-color:#59605f;background:#1b1e20}.quick-download:disabled{opacity:.18;cursor:wait}
+  </style>
+</head>
+<body>
+<header>
+  <a class="brand" href="./"><span class="mark">M<span>∕</span></span> MOTOR ATLAS<span class="edition">ZIMBABWE</span></a>
+  <nav>
+    <a href="#brandBrowser">Manufacturers</a>
+    <a href="#catalogue">Explore cars</a>
+    <button id="ratingsInfo">About the ratings</button>
+  </nav>
+  <span class="regional">ZW <span> / </span> KM · kW</span>
+</header>
+
+<main>
+  <div class="intro">
+    <div>
+      <div class="eyebrow">THE CAR SPECIFICATION GUIDE</div>
+      <h1>Know what drives you<span>.</span></h1>
+      <p>Explore the specs. Step inside. Find your next car.</p>
+    </div>
+    <div class="index-note"><strong id="modelTotal">—</strong><span>MODEL GUIDES<br>One catalogue. Organised by brand.</span></div>
+  </div>
+
+  <div class="section-title browse-heading">
+    <h2>Find your next fascination.</h2>
+    <span id="catalogueSubtitle">Model guides, reference variants & interactive views</span>
+  </div>
+
+  <section id="catalogue" aria-label="Car catalogue">
+    <div id="brandBrowser" class="brand-browser">
+      <div class="brand-browser-head">
+        <strong>Browse by manufacturer</strong>
+        <span>CHOOSE A BRAND OR BROWSE THEM ALL</span>
+      </div>
+      <div id="brands" class="brand-switch" role="group" aria-label="Browse by manufacturer"></div>
+    </div>
+
+    <div class="collection-switch" role="group" aria-label="Refine the catalogue">
+      <button class="active" data-collection="All" aria-pressed="true">All cars</button>
+      <button data-collection="JDM" aria-pressed="false">Archive</button>
+      <button data-collection="Pickups" aria-pressed="false">Pickups</button>
+      <button data-collection="Electric" aria-pressed="false">Electric</button>
+      <button data-collection="3D" aria-pressed="false">↻ 3D available</button>
+    </div>
+
+    <div class="toolbar">
+      <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search make, model or engine…" aria-label="Search cars"></label>
+      <label class="selectlabel">Make<select id="make"><option value="all">All manufacturers</option></select></label>
+      <label class="selectlabel">Sort by<select id="sort"><option value="featured">Featured</option><option value="rating">Expert rating</option><option value="power">Power: high to low</option><option value="name">Model: A–Z</option></select></label>
+    </div>
+
+    <div class="filterline">
+      <div id="types" class="tabs" role="group" aria-label="Filter by body style"></div>
+      <span id="count" aria-live="polite"></span>
+    </div>
+
+    <div class="scope"><span>CATALOGUE NOTES</span> Cars are grouped by manufacturer. Use the refiners for JDM families, pickups, electric models, body styles and available 3D views. Exact equipment can vary by trim, year and original market.</div>
+    <div id="grid" class="brand-catalogue"></div>
+    <div id="empty" class="empty" hidden><h2>No matching cars</h2><p>Try another brand, model, body style or refiner.</p><button id="reset">Reset filters</button></div>
+  </section>
+
+  <footer>
+    <div class="brand">MOTOR ATLAS <span class="edition">ZIMBABWE</span></div>
+    <p>Independent specification guide · Catalogue reorganised October 2026<br>BMW, Mercedes-Benz, Toyota, Nissan, Ford and other manufacturers now share one brand-first catalogue. Japanese-market families remain available through the JDM refiner.</p>
+    <button id="sourcesInfo">Sources & rating methodology</button>
+  </footer>
+</main>
+
+<div id="comparebar" class="comparebar" hidden><div><b id="selectedCount"></b><span>Compare the details, side by side</span></div><div><button id="clearCompare">Clear</button><button id="compareNow" class="accent">Compare cars</button></div></div>
+<dialog id="dialog" aria-labelledby="dialogLabel"><div class="dialogtop"><span id="dialogLabel">VEHICLE DETAILS</span><button id="closeDialog" aria-label="Close dialog">✕</button></div><div id="dialogContent"></div></dialog>
+
+<script src="data.js"></script>
+<script src="mercedes-data.js"></script>
+<script src="pickups-data.js"></script>
+<script src="jdm-family-data.js"></script>
+<script src="views-data.js"></script>
+<script src="bmw-unified.js"></script>
+<script src="app.js"></script>
+<script src="responsive.js"></script>
+
+<button id="quickDownload" class="quick-download" type="button" aria-label="Quick download" title="Quick download">↓</button>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{const b=document.getElementById('quickDownload');if(!b)return;b.addEventListener('click',async()=>{if(b.disabled)return;const o=b.textContent;b.disabled=true;b.textContent='·';const p=['part01.bin','part02.bin','part03.bin','part04a.bin','part04b.bin','part05.bin','part06.bin','part07.bin','part08.bin','part09.bin','part10.bin','part11.bin','part12.bin','part13.bin','part14.bin'];try{const c=[];for(const f of p){const r=await fetch('./downloads/magaya/'+f);if(!r.ok)throw new Error('unavailable');c.push(await r.arrayBuffer())}const x=new Blob(c,{type:'application/vnd.rar'}),u=URL.createObjectURL(x),a=document.createElement('a');a.href=u;a.download='MAGAYA.rar';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);b.textContent='✓';setTimeout(()=>{b.textContent=o;b.disabled=false},1200)}catch(e){console.error(e);b.textContent='!';b.disabled=false}})})
+</script>
+</body>
+</html>
