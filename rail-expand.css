@@ -1,0 +1,79 @@
+/* Motor Atlas — expanding desktop showroom rail
+   Keeps the compact icon-only rail by default, then smoothly opens to reveal
+   full labels when hovered or keyboard-focused. Mobile/tablet remain untouched. */
+@media (min-width:1100px) and (hover:hover){
+  .atlas-rail{
+    width:68px;
+    overflow:visible;
+    transition:width .28s cubic-bezier(.2,.7,.2,1),padding .28s ease,background .28s ease,border-color .28s ease,box-shadow .28s ease;
+  }
+  .atlas-rail::before{
+    content:'MOTOR ATLAS';
+    display:block;
+    width:0;
+    height:0;
+    margin:0;
+    overflow:hidden;
+    white-space:nowrap;
+    opacity:0;
+    color:#eff6f0;
+    font:700 11px/1 'DM Sans',Arial,sans-serif;
+    letter-spacing:.17em;
+    transition:opacity .16s ease,width .28s ease,height .28s ease,margin .28s ease;
+  }
+  .atlas-rail:hover,.atlas-rail:focus-within{
+    width:196px;
+    padding:12px 10px;
+    background:rgba(6,10,8,.9);
+    border-color:rgba(183,255,72,.3);
+    box-shadow:0 24px 70px #000b,0 0 36px rgba(183,255,72,.08);
+  }
+  .atlas-rail:hover::before,.atlas-rail:focus-within::before{
+    width:auto;
+    height:25px;
+    margin:2px 12px 7px;
+    opacity:.72;
+  }
+  .atlas-rail button{
+    width:50px;
+    overflow:visible;
+    transition:width .28s cubic-bezier(.2,.7,.2,1),background .2s ease,color .2s ease,box-shadow .2s ease;
+  }
+  .atlas-rail:hover button,.atlas-rail:focus-within button{
+    width:100%;
+    display:grid;
+    grid-template-columns:48px minmax(0,1fr);
+    align-items:center;
+    justify-items:center;
+    padding:0 10px 0 0;
+  }
+  .atlas-rail button::after{
+    transition:opacity .16s ease,transform .2s ease,color .2s ease;
+  }
+  .atlas-rail:hover button::after,.atlas-rail:focus-within button::after{
+    position:static;
+    grid-column:2;
+    justify-self:start;
+    transform:none;
+    opacity:1;
+    padding:0;
+    border:0;
+    background:transparent;
+    color:#c8d0ca;
+    font-size:12px;
+    letter-spacing:.02em;
+    box-shadow:none;
+  }
+  .atlas-rail:hover button:hover::after,.atlas-rail:focus-within button:focus-visible::after,.atlas-rail:hover button.active::after{
+    color:var(--lime);
+  }
+}
+
+/* Never force an expanding hover panel on touch-first devices. */
+@media (max-width:1099px), (hover:none){
+  .atlas-rail{transition:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .atlas-rail,.atlas-rail::before,.atlas-rail button,.atlas-rail button::after{transition:none!important}
+}
