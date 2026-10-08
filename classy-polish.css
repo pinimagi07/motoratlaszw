@@ -1,0 +1,42 @@
+/* Motor Atlas — classy interaction polish
+   Removes bright green focus boxes from catalogue controls and replaces
+   the inner card hover wash with a restrained graphite/silver treatment. */
+
+/* Catalogue controls: keep focus visible without neon green boxes. */
+.toolbar .search:focus-within,
+.toolbar .selectlabel:focus-within{
+  border-color:#46504a!important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.055)!important;
+}
+
+.toolbar .search input:focus,
+.toolbar .search input:focus-visible,
+.toolbar .selectlabel select:focus,
+.toolbar .selectlabel select:focus-visible{
+  outline:none!important;
+  box-shadow:none!important;
+  border-color:transparent!important;
+}
+
+/* Keyboard users still get a subtle neutral focus cue. */
+.toolbar .search:has(input:focus-visible),
+.toolbar .selectlabel:has(select:focus-visible){
+  border-color:#59635e!important;
+  box-shadow:0 0 0 2px rgba(215,221,217,.09)!important;
+}
+
+/* Cars: neutral charcoal base instead of a green-tinted panel. */
+.card{
+  background:linear-gradient(180deg,rgba(17,18,18,.97),rgba(7,8,8,.99))!important;
+}
+
+/* Keep the outer lime accent on hover, but remove the green wash inside. */
+.card::after{
+  background:radial-gradient(ellipse,rgba(205,211,207,.075),rgba(120,126,123,.025) 34%,transparent 67%)!important;
+}
+.card:hover::after{opacity:.72!important}
+
+/* Slightly cooler lower body section so the car image stays the focus. */
+.cardbody{
+  background:linear-gradient(180deg,rgba(13,14,14,.72),rgba(7,8,8,.92));
+}
