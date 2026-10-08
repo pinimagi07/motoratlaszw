@@ -1,0 +1,617 @@
+/* Motor Atlas responsive enhancement layer
+   Preserves the existing blue-hour design, branding and content.
+   This file is intentionally loaded after style.css/views.css so it can
+   correct fixed sizing and overflow without rewriting the original theme. */
+
+/* ---------- 1. Global responsive safety ---------- */
+html{
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+  overflow-x:clip;
+}
+body{
+  min-width:0;
+  overflow-x:hidden;
+}
+main,header,footer,section,article,div,nav,form,dialog{
+  min-width:0;
+}
+img,picture,video,canvas,svg{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+iframe{
+  max-width:100%;
+}
+button,a,input,select,summary{
+  -webkit-tap-highlight-color:transparent;
+}
+button,input,select,a[role="button"]{
+  min-height:2.75rem;
+}
+input,select,textarea{
+  max-width:100%;
+}
+
+/* ---------- 2. Fluid page shell and typography ---------- */
+header{
+  width:100%;
+  height:auto;
+  min-height:4.75rem;
+  padding-inline:clamp(1rem,4.5vw,4.5rem);
+  gap:clamp(.75rem,2vw,1.6rem);
+  position:relative;
+  z-index:50;
+  transition:padding .2s ease,gap .2s ease;
+}
+main{
+  width:min(100%,96rem);
+  max-width:96rem;
+  padding-inline:clamp(1rem,4.5vw,4.5rem);
+  overflow:visible;
+  transition:padding .2s ease;
+}
+.intro{
+  padding-block:clamp(1.75rem,4vw,2.8rem);
+  gap:clamp(1rem,4vw,2rem);
+}
+h1{
+  font-size:clamp(2.35rem,7vw,4.125rem);
+  overflow-wrap:anywhere;
+}
+.section-title h2,.method h2{
+  font-size:clamp(1.8rem,5vw,2.35rem);
+}
+.card h2{
+  font-size:clamp(1.65rem,4.8vw,2rem);
+  overflow-wrap:anywhere;
+}
+.detailhero h2{
+  font-size:clamp(2rem,6vw,2.8rem);
+  overflow-wrap:anywhere;
+}
+body,p,input,select,button{
+  font-size:clamp(.875rem,1.8vw,1rem);
+}
+
+/* ---------- 3. Mobile-first header/navigation ---------- */
+.mobile-menu-toggle{
+  display:inline-flex;
+  width:2.75rem;
+  height:2.75rem;
+  min-width:2.75rem;
+  padding:.62rem;
+  margin-left:auto;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:.27rem;
+  border:1px solid var(--border);
+  border-radius:.45rem;
+  background:#0c1928d9;
+  color:#fff;
+  z-index:52;
+}
+.mobile-menu-toggle span{
+  width:1.25rem;
+  height:2px;
+  min-height:0;
+  border-radius:99px;
+  background:currentColor;
+  transition:transform .22s ease,opacity .18s ease;
+}
+header.nav-open .mobile-menu-toggle span:nth-child(1){transform:translateY(.34rem) rotate(45deg)}
+header.nav-open .mobile-menu-toggle span:nth-child(2){opacity:0}
+header.nav-open .mobile-menu-toggle span:nth-child(3){transform:translateY(-.34rem) rotate(-45deg)}
+header nav{
+  position:absolute;
+  top:calc(100% + .5rem);
+  left:clamp(1rem,4.5vw,4.5rem);
+  right:clamp(1rem,4.5vw,4.5rem);
+  display:flex;
+  flex-direction:column;
+  gap:.25rem;
+  padding:.65rem;
+  border:1px solid var(--border);
+  border-radius:.7rem;
+  background:#071422f5;
+  box-shadow:0 1.2rem 3rem #0008;
+  backdrop-filter:blur(16px);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(-.5rem);
+  transition:opacity .2s ease,transform .2s ease,visibility .2s;
+}
+header.nav-open nav{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+header nav a,header nav button{
+  display:flex!important;
+  width:100%;
+  min-height:2.75rem;
+  align-items:center;
+  justify-content:flex-start;
+  padding:.72rem .9rem;
+  border-radius:.4rem;
+  font-size:.9rem;
+  text-align:left;
+}
+header nav a:hover,header nav button:hover{
+  background:#12304a;
+}
+.regional{display:none}
+.brand{
+  min-width:0;
+  font-size:clamp(.78rem,3vw,1.05rem);
+  gap:clamp(.45rem,2vw,.8rem);
+  white-space:nowrap;
+}
+.brand .edition{display:none}
+
+/* ---------- 4. Forms, filters and touch controls ---------- */
+.toolbar,
+.trim-controls{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:.75rem;
+}
+.search,.selectlabel{
+  width:100%;
+  min-width:0!important;
+}
+.search{
+  padding-inline:clamp(.75rem,3vw,1.125rem);
+}
+.search input,input{
+  min-height:2.75rem;
+  padding-block:.75rem;
+}
+.selectlabel{
+  padding:.55rem .8rem;
+}
+select{
+  min-height:2.3rem;
+}
+.collection-switch,.tabs,.viewer-tabs{
+  max-width:100%;
+  overflow-x:auto;
+  overflow-y:hidden;
+  overscroll-behavior-inline:contain;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+}
+.collection-switch button,.tabs button,.viewer-tabs button{
+  flex:0 0 auto;
+  min-height:2.75rem;
+}
+.filterline{
+  display:block;
+  margin-top:clamp(1rem,4vw,1.7rem);
+}
+#count{
+  display:block;
+  margin:.65rem 0 0;
+  padding-bottom:.75rem;
+  white-space:normal;
+}
+.scope{
+  overflow-wrap:anywhere;
+}
+
+/* ---------- 5. Responsive car, family and BMW grids ---------- */
+.grid,
+.family-grid,
+.ma-bmw-grid{
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:clamp(1rem,3vw,1.5rem)!important;
+}
+.card,.family,.ma-bmw-card{
+  width:100%;
+  max-width:100%;
+}
+.photo{
+  height:auto!important;
+  aspect-ratio:16/9;
+}
+.photo img,.photo-open img{
+  width:100%;
+  height:100%!important;
+  object-fit:cover;
+}
+.family img{
+  width:100%;
+  height:auto!important;
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
+.cardbody{
+  padding:clamp(1rem,4vw,1.35rem);
+}
+.specstrip{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(.4rem,2vw,.75rem);
+}
+.specstrip>*{
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+.cardactions{
+  flex-wrap:wrap;
+  gap:.65rem;
+}
+.cardactions .view{
+  min-height:2.75rem;
+}
+.compare{
+  min-height:2.75rem;
+  padding:.25rem 0;
+}
+.compare input{
+  width:1.15rem;
+  height:1.15rem;
+  min-height:0;
+}
+
+/* ---------- 6. JDM trim catalogue and specification tables ---------- */
+.section-title{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.45rem;
+}
+.trim-panel{
+  width:100%;
+  padding:clamp(.85rem,3vw,1.4rem);
+  overflow:hidden;
+}
+.trim-heading{
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap:.6rem;
+}
+.tablewrap{
+  width:100%;
+  max-width:100%;
+  overflow-x:auto;
+  overscroll-behavior-inline:contain;
+  -webkit-overflow-scrolling:touch;
+}
+.tablewrap table{
+  width:100%;
+  min-width:max-content;
+}
+.trim-pages{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:.65rem;
+}
+.trim-pages button{
+  min-height:2.75rem;
+}
+
+/* ---------- 7. Dialogs, details, comparison and 3D viewer ---------- */
+dialog,.ma-bmw-dialog{
+  width:min(58rem,calc(100vw - 1rem))!important;
+  max-width:calc(100vw - 1rem)!important;
+  max-height:calc(100dvh - 1rem)!important;
+  margin:auto;
+  overflow:auto;
+}
+.dialogtop{
+  padding:clamp(.7rem,3vw,1rem) clamp(.85rem,4vw,1.6rem);
+}
+#dialogContent{
+  padding:clamp(.9rem,4vw,1.65rem);
+}
+.detailhero,.specsections{
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:clamp(1rem,3vw,1.5rem);
+}
+.detailhero img,.detail-photo img{
+  width:100%;
+  height:auto!important;
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
+dl>div,.ma-bmw dl>div,.ma-bmw-dialog dl>div{
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+dd{
+  max-width:58%;
+  overflow-wrap:anywhere;
+}
+.vehicle-viewer{
+  width:100%;
+  max-width:100%;
+}
+.viewer-heading{
+  display:block;
+  padding:clamp(.9rem,3vw,1.35rem);
+}
+.viewer-heading>span{
+  display:block;
+  margin-top:.45rem;
+}
+.vehicle-stage iframe{
+  width:100%;
+  height:auto!important;
+  aspect-ratio:16/10;
+  min-height:16rem;
+}
+.comparebar{
+  width:min(40rem,calc(100vw - 1rem));
+  max-width:calc(100vw - 1rem);
+  bottom:max(.5rem,env(safe-area-inset-bottom));
+  padding:.75rem;
+  gap:.5rem;
+  flex-wrap:wrap;
+}
+.comparebar>div:last-child{
+  display:flex;
+  gap:.45rem;
+  margin-left:auto;
+}
+
+/* ---------- 8. Footer and safe-area spacing ---------- */
+footer{
+  margin-bottom:clamp(4rem,12vw,6.25rem);
+  padding-top:clamp(1rem,3vw,1.6rem);
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.75rem;
+  overflow-wrap:anywhere;
+}
+.empty{
+  padding:clamp(2.5rem,10vw,4.5rem) 1rem;
+}
+.quick-download{
+  right:max(.75rem,env(safe-area-inset-right))!important;
+  bottom:max(.75rem,env(safe-area-inset-bottom))!important;
+}
+
+/* ---------- 9. BMW add-on responsive integration ---------- */
+.ma-bmw{
+  width:100%;
+  max-width:100%!important;
+  margin:clamp(2rem,6vw,3.5rem) auto;
+  padding:clamp(1rem,4vw,1.75rem)!important;
+}
+.ma-bmw-heading{
+  display:block!important;
+}
+.ma-bmw-controls{
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:.75rem!important;
+}
+.ma-bmw-image img{
+  width:100%;
+  height:auto!important;
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
+.ma-bmw-card-body{
+  padding:clamp(1rem,4vw,1.2rem);
+}
+.ma-bmw-card h3{
+  font-size:clamp(1.45rem,5vw,1.65rem);
+}
+.ma-bmw-detail-photo{
+  width:100%;
+  max-height:none!important;
+  height:auto!important;
+  object-fit:contain;
+}
+
+/* ---------- 10. Small phones: 320px–479px ---------- */
+@media (max-width:29.99rem){
+  header{
+    min-height:4.25rem;
+    padding-inline:.8rem;
+  }
+  main{
+    padding-inline:.8rem;
+  }
+  header nav{
+    left:.8rem;
+    right:.8rem;
+  }
+  .mark{font-size:1.65rem}
+  .intro p{font-size:.86rem}
+  .index-note{display:none}
+  .specstrip{
+    grid-template-columns:1fr;
+  }
+  .specstrip>div{
+    padding:.35rem 0;
+  }
+  .family-grid{
+    grid-template-columns:1fr!important;
+  }
+  dl>div,.ma-bmw dl>div,.ma-bmw-dialog dl>div{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:.25rem;
+  }
+  dd{
+    max-width:100%;
+    text-align:left;
+  }
+  .comparebar span{display:none}
+  .comparebar>div:last-child{width:100%;margin-left:0}
+  .comparebar button{flex:1}
+}
+
+/* ---------- 11. Larger phones: 480px–767px ---------- */
+@media (min-width:30rem) and (max-width:47.99rem){
+  .toolbar{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .toolbar .search{
+    grid-column:1/-1;
+  }
+  .trim-controls{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .trim-controls .search{
+    grid-column:1/-1;
+  }
+  .family-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
+/* ---------- 12. Tablets: 768px–1024px ---------- */
+@media (min-width:48rem) and (max-width:64rem){
+  .mobile-menu-toggle{display:none}
+  header nav{
+    position:static;
+    width:auto;
+    margin-left:auto;
+    padding:0;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    box-shadow:none;
+    backdrop-filter:none;
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:none;
+    flex-direction:row;
+    align-items:center;
+    gap:clamp(.55rem,2vw,1.2rem);
+  }
+  header nav a,header nav button{
+    width:auto;
+    min-height:2.75rem;
+    padding:.55rem .35rem;
+    justify-content:center;
+    white-space:nowrap;
+    font-size:.78rem;
+  }
+  .grid,.ma-bmw-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .family-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .toolbar{
+    grid-template-columns:minmax(0,2fr) minmax(10rem,1fr) minmax(10rem,1fr);
+  }
+  .trim-controls,.ma-bmw-controls{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .detailhero,.specsections{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  footer{
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+}
+
+/* ---------- 13. Desktop/laptop: 1025px+ ---------- */
+@media (min-width:64.01rem){
+  .mobile-menu-toggle{display:none}
+  header nav{
+    position:static;
+    width:auto;
+    margin-left:auto;
+    padding:0;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    box-shadow:none;
+    backdrop-filter:none;
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:none;
+    flex-direction:row;
+    align-items:center;
+    gap:clamp(1rem,2vw,1.9rem);
+  }
+  header nav a,header nav button{
+    width:auto;
+    min-height:2.75rem;
+    padding:.4rem 0;
+    justify-content:center;
+    white-space:nowrap;
+    font-size:.875rem;
+  }
+  .regional{display:inline}
+  .brand .edition{display:inline-block}
+  .grid,.ma-bmw-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  }
+  .family-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  }
+  .toolbar{
+    display:flex;
+  }
+  .toolbar .search{flex:1 1 24rem}
+  .toolbar .selectlabel{flex:0 1 13rem}
+  .trim-controls{
+    grid-template-columns:minmax(15rem,2fr) repeat(3,minmax(9rem,1fr));
+  }
+  .ma-bmw-controls{
+    grid-template-columns:2fr 1fr 1fr 1fr!important;
+  }
+  .detailhero,.specsections{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .section-title{
+    flex-direction:row;
+    align-items:flex-end;
+  }
+  footer{
+    flex-direction:row;
+    align-items:center;
+  }
+}
+
+/* ---------- 14. Landscape phones/tablets ---------- */
+@media (orientation:landscape) and (max-width:64rem){
+  .intro{
+    padding-block:1.1rem;
+  }
+  h1{
+    font-size:clamp(2rem,7vh,3.3rem);
+  }
+  header.nav-open nav{
+    max-height:calc(100dvh - 5rem);
+    overflow-y:auto;
+  }
+  .vehicle-stage iframe{
+    min-height:14rem;
+    max-height:72dvh;
+  }
+  dialog,.ma-bmw-dialog{
+    max-height:96dvh!important;
+  }
+}
+@media (orientation:landscape) and (min-width:37.5rem) and (max-width:47.99rem){
+  .grid,.ma-bmw-grid,.family-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
+/* ---------- 15. Motion and resizing ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .grid,.family-grid,.toolbar,.trim-controls,.ma-bmw-grid,.ma-bmw-controls,
+  .card,.family,.ma-bmw-card,main,header{
+    transition:gap .2s ease,padding .2s ease,grid-template-columns .2s ease;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .mobile-menu-toggle span{transition:none}
+}
