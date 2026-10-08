@@ -1,0 +1,26 @@
+/* Brand-first catalogue layout
+   Keeps the existing Motor Atlas blue-hour palette and card styling while
+   giving every manufacturer a clear, consistent section. */
+.brand-browser{margin:0 0 1.35rem;padding:1rem 0 .25rem;border-top:1px solid var(--border)}
+.brand-browser-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:.8rem}
+.brand-browser-head strong{font:600 clamp(1.25rem,2.5vw,1.6rem) 'Barlow Condensed',Arial,sans-serif}
+.brand-browser-head span{font-size:.72rem;letter-spacing:.13em;color:var(--muted)}
+.brand-switch{display:flex;flex-wrap:wrap;gap:.55rem;max-width:100%}
+.brand-switch button{min-height:2.75rem;padding:.65rem .9rem;border:1px solid #405b75;border-radius:999px;background:#101f30c9;color:#c3d4e3;font-size:.78rem;transition:border-color .18s,background .18s,color .18s,transform .18s}
+.brand-switch button:hover{border-color:var(--lime)}
+.brand-switch button.active{background:var(--lime);border-color:var(--lime);color:#082034}
+.brand-switch button small{margin-left:.35rem;opacity:.72;font-size:.68rem}
+.brand-catalogue{display:block;width:100%}
+.brand-group{margin:0 0 clamp(2.4rem,6vw,4.5rem);scroll-margin-top:1.5rem}
+.brand-group-heading{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin:0 0 1rem;padding:0 0 .8rem;border-bottom:1px solid var(--border)}
+.brand-group-heading .eyebrow{margin-bottom:.2rem}
+.brand-group-heading h2{margin:0;font:600 clamp(2rem,4vw,2.8rem)/1 'Barlow Condensed',Arial,sans-serif}
+.brand-group-heading>span{color:var(--muted);font-size:.76rem;white-space:nowrap}
+.brand-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.catalogue-intro-note{margin:.5rem 0 1.15rem;color:var(--muted);font-size:.78rem;line-height:1.65}
+.collection-switch{margin-bottom:1rem}
+.collection-switch button[data-collection="JDM"]::before{content:'JDM · ';font-size:.68rem;letter-spacing:.08em}
+@media(max-width:64rem){.brand-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.brand-switch{flex-wrap:nowrap;overflow-x:auto;padding-bottom:.35rem;overscroll-behavior-inline:contain;scrollbar-width:thin}.brand-switch button{flex:0 0 auto}}
+@media(max-width:47.99rem){.brand-grid{grid-template-columns:minmax(0,1fr)}.brand-browser-head{align-items:start;flex-direction:column;gap:.25rem}.brand-group-heading{align-items:start}.brand-group-heading h2{font-size:clamp(1.9rem,10vw,2.45rem)}.brand-group-heading>span{font-size:.7rem}.brand-switch{margin-inline:-.15rem;padding-inline:.15rem}.catalogue-intro-note{font-size:.74rem}}
+@media(max-width:22rem){.brand-group-heading{flex-direction:column}.brand-group-heading>span{white-space:normal}}
+@media(prefers-reduced-motion:reduce){.brand-switch button{transition:none}}
