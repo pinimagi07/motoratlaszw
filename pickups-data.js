@@ -9,3 +9,21 @@ cars.unshift(...pickups,...mercedesCars);
 
 // Load the BMW add-on after the existing catalogue data is ready.
 (()=>{if(!document.querySelector('script[data-motoratlas-bmw]')){const s=document.createElement('script');s.src='bmw-addon/bmw.js';s.dataset.motoratlasBmw='1';document.head.appendChild(s)}})();
+
+// Responsive enhancement layer. Kept separate so the original Motor Atlas
+// styling and catalogue logic remain untouched and easy to maintain.
+(()=>{
+  if(!document.getElementById('motorAtlasResponsiveCSS')){
+    const l=document.createElement('link');
+    l.id='motorAtlasResponsiveCSS';
+    l.rel='stylesheet';
+    l.href='responsive.css';
+    document.head.appendChild(l);
+  }
+  if(!document.querySelector('script[data-motoratlas-responsive]')){
+    const s=document.createElement('script');
+    s.src='responsive.js';
+    s.dataset.motoratlasResponsive='1';
+    document.head.appendChild(s);
+  }
+})();
