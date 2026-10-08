@@ -6,3 +6,6 @@ const pickups=[
 ];
 
 cars.unshift(...pickups,...mercedesCars);
+
+// Load the BMW add-on after the existing catalogue data is ready.
+(()=>{if(!document.querySelector('script[data-motoratlas-bmw]')){const s=document.createElement('script');s.src='bmw-addon/bmw.js';s.dataset.motoratlasBmw='1';document.head.appendChild(s)}})();
