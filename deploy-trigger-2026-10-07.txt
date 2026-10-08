@@ -1,2 +1,2 @@
-Trigger Cloudflare Pages redeploy for Motor Atlas step-by-step restore.
-Latest requested deploy: app.js restoration.
+Trigger Cloudflare Pages redeploy for Motor Atlas.
+Latest requested deploy: activate D1 feedback database binding and ADMIN_TOKEN secret for community comments and ratings.
