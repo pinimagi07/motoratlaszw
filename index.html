@@ -99,7 +99,7 @@
 
 <button id="quickDownload" class="quick-download" type="button" aria-label="Quick download" title="Quick download">↓</button>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{const b=document.getElementById('quickDownload');if(!b)return;b.addEventListener('click',async()=>{if(b.disabled)return;const o=b.textContent;b.disabled=true;b.textContent='·';const p=['part01.bin','part02.bin','part03.bin','part04a.bin','part04b.bin','part05.bin','part06.bin','part07.bin','part08.bin','part09.bin','part10.bin','part11.bin','part12.bin','part13.bin','part14.bin'];try{const c=[];for(const f of p){const r=await fetch('./downloads/magaya/'+f);if(!r.ok)throw new Error('unavailable');c.push(await r.arrayBuffer())}const x=new Blob(c,{type:'application/vnd.rar'}),u=URL.createObjectURL(x),a=document.createElement('a');a.href=u;a.download='MAGAYA.rar';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);b.textContent='✓';setTimeout(()=>{b.textContent=o;b.disabled=false},1200)}catch(e){console.error(e);b.textContent='!';b.disabled=false}})})
+document.addEventListener('DOMContentLoaded',()=>{const b=document.getElementById('quickDownload');if(!b)return;b.addEventListener('click',()=>{if(b.disabled)return;const o=b.textContent;b.disabled=true;b.textContent='·';try{const a=document.createElement('a');a.href='./downloads/magaya/MAGAYA.rar';a.download='MAGAYA.rar';document.body.appendChild(a);a.click();a.remove();b.textContent='✓';setTimeout(()=>{b.textContent=o;b.disabled=false},1200)}catch(e){console.error(e);b.textContent='!';b.disabled=false}})})
 </script>
 </body>
 </html>
