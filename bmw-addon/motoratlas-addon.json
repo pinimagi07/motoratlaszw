@@ -1,0 +1,7 @@
+{
+  "installer": "MotorAtlasBMW",
+  "version": 1,
+  "count": 24,
+  "integration": "manual-static",
+  "photo_policy": "user-supplied local images"
+}

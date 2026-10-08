@@ -1,0 +1,696 @@
+[
+  {
+    "id": "120",
+    "model": "1 Series",
+    "trim": "120",
+    "year": 2024,
+    "body": "Hatchback",
+    "fuel": "Petrol mild hybrid",
+    "power": 125,
+    "wiki": "BMW 1 Series (F70)",
+    "source": "https://www.press.bmwgroup.com/united-kingdom/article/detail/T0442821EN_GB/",
+    "market": "United Kingdom launch reference",
+    "specs": {
+      "Reference year": "2024",
+      "Body style": "Hatchback",
+      "Fuel / propulsion": "Petrol mild hybrid",
+      "Power": "125 kW",
+      "System torque": "280 Nm",
+      "0–100 km/h": "7.8 s"
+    },
+    "photo": {
+      "file": "120.jpg",
+      "title": "BMW 1 Series reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW 1 Series model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "220i",
+    "model": "2 Series",
+    "trim": "220i Coupé",
+    "year": 2022,
+    "body": "Coupé",
+    "fuel": "Petrol",
+    "power": 135,
+    "wiki": "BMW 2 Series (G42)",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0336854EN/",
+    "market": "European launch reference",
+    "specs": {
+      "Reference year": "2022",
+      "Body style": "Coupé",
+      "Fuel / propulsion": "Petrol",
+      "Power": "135 kW",
+      "Engine": "Four-cylinder petrol"
+    },
+    "photo": {
+      "file": "220i.jpg",
+      "title": "BMW 2 Series reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW 2 Series model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "320i",
+    "model": "3 Series",
+    "trim": "320i Saloon",
+    "year": 2024,
+    "body": "Saloon",
+    "fuel": "Petrol",
+    "power": 135,
+    "wiki": "BMW 3 Series (G20)",
+    "source": "https://www.bmw.co.uk/en/all-models/3-series/3-series-sedan/3-series-sedan-2024-g20-lci-ice-technical-data.html",
+    "market": "United Kingdom reference",
+    "specs": {
+      "Reference year": "2024",
+      "Body style": "Saloon",
+      "Fuel / propulsion": "Petrol",
+      "Power": "135 kW",
+      "Torque": "300 Nm",
+      "Engine speed at rated power": "5,000–6,500 rpm"
+    },
+    "photo": {
+      "file": "320i.jpg",
+      "title": "BMW 3 Series reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW 3 Series model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "420i",
+    "model": "4 Series",
+    "trim": "420i Coupé",
+    "year": 2024,
+    "body": "Coupé",
+    "fuel": "Petrol",
+    "power": 135,
+    "wiki": "BMW 4 Series (G22)",
+    "source": "https://www.press.bmwgroup.com/romania/article/detail/T0439377RO/",
+    "market": "European launch reference",
+    "specs": {
+      "Reference year": "2024",
+      "Body style": "Coupé",
+      "Fuel / propulsion": "Petrol",
+      "Power": "135 kW",
+      "Engine": "1,998 cc, four-cylinder petrol",
+      "Transmission": "8-speed Steptronic"
+    },
+    "photo": {
+      "file": "420i.jpg",
+      "title": "BMW 4 Series reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW 4 Series model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "520i",
+    "model": "5 Series",
+    "trim": "520i Sedan",
+    "year": 2023,
+    "body": "Saloon",
+    "fuel": "Petrol mild hybrid",
+    "power": 153,
+    "wiki": "BMW 5 Series (G60)",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0416261EN/",
+    "market": "European / global launch reference",
+    "specs": {
+      "Reference year": "2023",
+      "Body style": "Saloon",
+      "Fuel / propulsion": "Petrol mild hybrid",
+      "Power": "153 kW",
+      "Engine": "Four-cylinder petrol"
+    },
+    "photo": {
+      "file": "520i.jpg",
+      "title": "BMW 5 Series reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW 5 Series model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "740i",
+    "model": "7 Series",
+    "trim": "740i",
+    "year": 2022,
+    "body": "Saloon",
+    "fuel": "Petrol mild hybrid",
+    "power": 280,
+    "wiki": "BMW 7 Series (G70)",
+    "source": "https://www.press.bmwgroup.com/africa-dom-easteurope/article/attachment/T0380173EN/568611",
+    "market": "Non-European launch reference",
+    "specs": {
+      "Reference year": "2022",
+      "Body style": "Saloon",
+      "Fuel / propulsion": "Petrol mild hybrid",
+      "Power": "280 kW",
+      "System torque": "540 Nm"
+    },
+    "photo": {
+      "file": "740i.jpg",
+      "title": "BMW 7 Series reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW 7 Series model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "840i",
+    "model": "8 Series",
+    "trim": "840i Coupé",
+    "year": 2022,
+    "body": "Coupé",
+    "fuel": "Petrol",
+    "power": 245,
+    "wiki": "BMW 8 Series (G15)",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0365013EN/",
+    "market": "European / global launch reference",
+    "specs": {
+      "Reference year": "2022",
+      "Body style": "Coupé",
+      "Fuel / propulsion": "Petrol",
+      "Power": "245 kW",
+      "Drive": "Rear-wheel drive",
+      "Fuel consumption (WLTP)": "8.2–8.6 L/100 km"
+    },
+    "photo": {
+      "file": "840i.jpg",
+      "title": "BMW 8 Series reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW 8 Series model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "x1",
+    "model": "X1",
+    "trim": "sDrive18i",
+    "year": 2022,
+    "body": "SUV",
+    "fuel": "Petrol",
+    "power": 100,
+    "wiki": "BMW X1 (U11)",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0393974EN/",
+    "market": "European / global launch reference",
+    "specs": {
+      "Reference year": "2022",
+      "Body style": "SUV",
+      "Fuel / propulsion": "Petrol",
+      "Power": "100 kW",
+      "Engine": "1.5-litre three-cylinder petrol",
+      "Torque": "230 Nm"
+    },
+    "photo": {
+      "file": "x1.jpg",
+      "title": "BMW X1 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW X1 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "x2",
+    "model": "X2",
+    "trim": "sDrive20i",
+    "year": 2024,
+    "body": "SUV",
+    "fuel": "Petrol mild hybrid",
+    "power": 125,
+    "wiki": "BMW X2",
+    "source": "https://www.press.bmwgroup.com/africa-dom-easteurope/article/detail/T0437451EN/",
+    "market": "European launch reference; U10 generation",
+    "specs": {
+      "Reference year": "2024",
+      "Body style": "SUV",
+      "Fuel / propulsion": "Petrol mild hybrid",
+      "Power": "125 kW",
+      "Engine": "1.5-litre three-cylinder petrol",
+      "Power basis": "Combined mild-hybrid system"
+    },
+    "photo": {
+      "file": "x2.jpg",
+      "title": "BMW X2 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW X2 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "x3",
+    "model": "X3",
+    "trim": "20 xDrive",
+    "year": 2024,
+    "body": "SUV",
+    "fuel": "Petrol mild hybrid",
+    "power": 153,
+    "wiki": "BMW X3 (G45)",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0442377EN/",
+    "market": "European / global launch reference",
+    "specs": {
+      "Reference year": "2024",
+      "Body style": "SUV",
+      "Fuel / propulsion": "Petrol mild hybrid",
+      "Power": "153 kW",
+      "Engine": "2.0-litre four-cylinder petrol",
+      "Fuel consumption (WLTP)": "6.9–7.6 L/100 km"
+    },
+    "photo": {
+      "file": "x3.jpg",
+      "title": "BMW X3 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW X3 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "x4",
+    "model": "X4",
+    "trim": "xDrive20i",
+    "year": 2021,
+    "body": "SUV",
+    "fuel": "Petrol mild hybrid",
+    "power": 135,
+    "wiki": "BMW X4 (G02)",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0334392EN/",
+    "market": "Germany launch reference",
+    "specs": {
+      "Reference year": "2021",
+      "Body style": "SUV",
+      "Fuel / propulsion": "Petrol mild hybrid",
+      "Power": "135 kW",
+      "Fuel consumption (WLTP)": "7.5–8.4 L/100 km"
+    },
+    "photo": {
+      "file": "x4.jpg",
+      "title": "BMW X4 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW X4 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "x5",
+    "model": "X5",
+    "trim": "xDrive40i",
+    "year": 2023,
+    "body": "SUV",
+    "fuel": "Petrol mild hybrid",
+    "power": 280,
+    "wiki": "BMW X5 (G05)",
+    "source": "https://www.press.bmwgroup.com/africa-dom-easteurope/article/detail/T0408159EN/",
+    "market": "European / global launch reference",
+    "specs": {
+      "Reference year": "2023",
+      "Body style": "SUV",
+      "Fuel / propulsion": "Petrol mild hybrid",
+      "Power": "280 kW",
+      "Engine": "3.0-litre inline-six petrol",
+      "Combustion engine torque": "520 Nm"
+    },
+    "photo": {
+      "file": "x5.jpg",
+      "title": "BMW X5 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW X5 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "x6",
+    "model": "X6",
+    "trim": "xDrive40i",
+    "year": 2023,
+    "body": "SUV",
+    "fuel": "Petrol mild hybrid",
+    "power": 280,
+    "wiki": "BMW X6 (G06)",
+    "source": "https://www.press.bmwgroup.com/africa-dom-easteurope/article/detail/T0408159EN/",
+    "market": "European / global launch reference",
+    "specs": {
+      "Reference year": "2023",
+      "Body style": "SUV",
+      "Fuel / propulsion": "Petrol mild hybrid",
+      "Power": "280 kW",
+      "Engine": "3.0-litre inline-six petrol",
+      "Combustion engine torque": "520 Nm"
+    },
+    "photo": {
+      "file": "x6.jpg",
+      "title": "BMW X6 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW X6 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "x7",
+    "model": "X7",
+    "trim": "xDrive40i",
+    "year": 2022,
+    "body": "SUV",
+    "fuel": "Petrol mild hybrid",
+    "power": 280,
+    "wiki": "BMW X7",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0378353EN/",
+    "market": "Global 2022 facelift reference",
+    "specs": {
+      "Reference year": "2022",
+      "Body style": "SUV",
+      "Fuel / propulsion": "Petrol mild hybrid",
+      "Power": "280 kW",
+      "Combustion engine torque": "520 Nm",
+      "Torque with mild-hybrid assistance": "Up to 540 Nm"
+    },
+    "photo": {
+      "file": "x7.jpg",
+      "title": "BMW X7 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW X7 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "z4",
+    "model": "Z4",
+    "trim": "sDrive20i",
+    "year": 2019,
+    "body": "Roadster",
+    "fuel": "Petrol",
+    "power": 145,
+    "wiki": "BMW Z4 (G29)",
+    "source": "https://www.press.bmwgroup.com/south-africa/article/detail/T0293703EN/",
+    "market": "South Africa launch reference",
+    "specs": {
+      "Reference year": "2019",
+      "Body style": "Roadster",
+      "Fuel / propulsion": "Petrol",
+      "Power": "145 kW",
+      "Torque": "320 Nm",
+      "0–100 km/h": "6.6 s"
+    },
+    "photo": {
+      "file": "z4.jpg",
+      "title": "BMW Z4 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW Z4 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "i4",
+    "model": "i4",
+    "trim": "eDrive40",
+    "year": 2021,
+    "body": "Gran Coupé",
+    "fuel": "Electric",
+    "power": 250,
+    "wiki": "BMW i4",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0333329EN/",
+    "market": "European / global launch reference",
+    "specs": {
+      "Reference year": "2021",
+      "Body style": "Gran Coupé",
+      "Fuel / propulsion": "Electric",
+      "Power": "250 kW",
+      "Drive": "Rear-wheel drive",
+      "Range (WLTP, launch)": "Up to 590 km"
+    },
+    "photo": {
+      "file": "i4.jpg",
+      "title": "BMW i4 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW i4 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "i5",
+    "model": "i5",
+    "trim": "eDrive40 Sedan",
+    "year": 2023,
+    "body": "Saloon",
+    "fuel": "Electric",
+    "power": 250,
+    "wiki": "BMW 5 Series (G60)",
+    "source": "https://www.press.bmwgroup.com/africa-dom-easteurope/article/detail/T0416261EN/",
+    "market": "European / global launch reference",
+    "specs": {
+      "Reference year": "2023",
+      "Body style": "Saloon",
+      "Fuel / propulsion": "Electric",
+      "Power": "250 kW",
+      "Drive": "Rear-wheel drive",
+      "Peak torque with Sport Boost / Launch Control": "430 Nm"
+    },
+    "photo": {
+      "file": "i5.jpg",
+      "title": "BMW i5 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW i5 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "i7",
+    "model": "i7",
+    "trim": "xDrive60",
+    "year": 2022,
+    "body": "Saloon",
+    "fuel": "Electric",
+    "power": 400,
+    "wiki": "BMW 7 Series (G70)",
+    "source": "https://www.press.bmwgroup.com/asia/article/detail/T0403587EN/",
+    "market": "Singapore launch reference",
+    "specs": {
+      "Reference year": "2022",
+      "Body style": "Saloon",
+      "Fuel / propulsion": "Electric",
+      "Power": "400 kW",
+      "Electric motors": "2",
+      "System torque": "745 Nm"
+    },
+    "photo": {
+      "file": "i7.jpg",
+      "title": "BMW i7 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW i7 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "ix",
+    "model": "iX",
+    "trim": "xDrive50",
+    "year": 2021,
+    "body": "SUV",
+    "fuel": "Electric",
+    "power": 385,
+    "wiki": "BMW iX",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0333569EN/",
+    "market": "European / global launch reference",
+    "specs": {
+      "Reference year": "2021",
+      "Body style": "SUV",
+      "Fuel / propulsion": "Electric",
+      "Power": "385 kW",
+      "Drive": "Electric all-wheel drive"
+    },
+    "photo": {
+      "file": "ix.jpg",
+      "title": "BMW iX reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW iX model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "m2",
+    "model": "M2",
+    "trim": "Coupé automatic",
+    "year": 2024,
+    "body": "Coupé",
+    "fuel": "Petrol",
+    "power": 353,
+    "wiki": "BMW M2",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0442878EN/",
+    "market": "Global 2024 update; G87 generation",
+    "specs": {
+      "Reference year": "2024",
+      "Body style": "Coupé",
+      "Fuel / propulsion": "Petrol",
+      "Power": "353 kW",
+      "Engine": "Inline-six petrol",
+      "Drive": "Rear-wheel drive",
+      "0–100 km/h": "4.0 s"
+    },
+    "photo": {
+      "file": "m2.jpg",
+      "title": "BMW M2 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW M2 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "m3",
+    "model": "M3",
+    "trim": "Competition Sedan with M xDrive",
+    "year": 2024,
+    "body": "Saloon",
+    "fuel": "Petrol",
+    "power": 390,
+    "wiki": "BMW M3",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0442275EN/",
+    "market": "Global 2024 update; G80 generation",
+    "specs": {
+      "Reference year": "2024",
+      "Body style": "Saloon",
+      "Fuel / propulsion": "Petrol",
+      "Power": "390 kW",
+      "Engine": "Inline-six petrol",
+      "Torque": "650 Nm",
+      "Drive": "All-wheel drive",
+      "Transmission": "8-speed M Steptronic"
+    },
+    "photo": {
+      "file": "m3.jpg",
+      "title": "BMW M3 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW M3 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "m4",
+    "model": "M4",
+    "trim": "Competition Coupé with M xDrive",
+    "year": 2024,
+    "body": "Coupé",
+    "fuel": "Petrol",
+    "power": 390,
+    "wiki": "BMW M4",
+    "source": "https://www.press.bmwgroup.com/africa-dom-easteurope/article/detail/T0439308EN/",
+    "market": "Global 2024 update; G82 generation",
+    "specs": {
+      "Reference year": "2024",
+      "Body style": "Coupé",
+      "Fuel / propulsion": "Petrol",
+      "Power": "390 kW",
+      "Engine": "Inline-six petrol",
+      "Engine speed at rated power": "6,250 rpm"
+    },
+    "photo": {
+      "file": "m4.jpg",
+      "title": "BMW M4 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW M4 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "m5",
+    "model": "M5",
+    "trim": "Saloon",
+    "year": 2024,
+    "body": "Saloon",
+    "fuel": "Plug-in hybrid",
+    "power": 535,
+    "wiki": "BMW M5",
+    "source": "https://www.press.bmwgroup.com/india/article/detail/T0446483EN/",
+    "market": "India launch reference; G90 generation",
+    "specs": {
+      "Reference year": "2024",
+      "Body style": "Saloon",
+      "Fuel / propulsion": "Plug-in hybrid",
+      "Power": "535 kW",
+      "System torque": "1,000 Nm",
+      "0–100 km/h": "3.5 s"
+    },
+    "photo": {
+      "file": "m5.jpg",
+      "title": "BMW M5 reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW M5 model-family reference photo; exact trim, year and equipment may differ."
+    }
+  },
+  {
+    "id": "xm",
+    "model": "XM",
+    "trim": "Standard XM",
+    "year": 2023,
+    "body": "SUV",
+    "fuel": "Plug-in hybrid",
+    "power": 480,
+    "wiki": "BMW XM",
+    "source": "https://www.press.bmwgroup.com/global/article/detail/T0403971EN/",
+    "market": "Global launch reference; not Label Red",
+    "specs": {
+      "Reference year": "2023",
+      "Body style": "SUV",
+      "Fuel / propulsion": "Plug-in hybrid",
+      "Power": "480 kW",
+      "System torque": "800 Nm",
+      "Power basis": "Combined hybrid system"
+    },
+    "photo": {
+      "file": "xm.jpg",
+      "title": "BMW XM reference image",
+      "artist": "User supplied",
+      "license": "Attribution / licence not supplied",
+      "license_url": "",
+      "source": "",
+      "caption": "BMW XM model-family reference photo; exact trim, year and equipment may differ."
+    }
+  }
+]
