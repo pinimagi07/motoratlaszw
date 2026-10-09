@@ -1,0 +1,1 @@
+window.__ATENZA_B64=(window.__ATENZA_B64||'')+'sOV0HPdcUVgVjPS/yG0dQ5clvtEBY1W4ALogm1QGjVhPHiDUkyA1qMaOAo83rDgQhZytqZDdqq1q8WLv4n//2Q==';(()=>{const c=(window.cars||cars).find(x=>x.id==='atenza');if(c)c.image='data:image/jpeg;base64,'+window.__ATENZA_B64;delete window.__ATENZA_B64;})();
