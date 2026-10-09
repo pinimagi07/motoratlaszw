@@ -1,5 +1,5 @@
 // Motor Atlas — Mazda/Honda catalogue additions (October 2026)
-// Reference variants use manufacturer specifications; photos are from Wikimedia Commons.
+// Reference variants use manufacturer specifications; photos are licensed reference images or user-provided assets.
 
 cars.push(...[
   {
@@ -17,8 +17,8 @@ cars.push(...[
     market:'Japan',
     tags:['JDM'],
     keywords:'Mazda6 GJ XD L Package diesel Japan JDM SKYACTIV-D',
-    image:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Mazda_ATENZA_SEDAN_XD_L_Package_%283DA-GJ2FP%29_front.jpg?width=1280',
-    imageAlt:'2018 Mazda Atenza Sedan XD L Package, front three-quarter view',
+    image:'assets/atenza-user.jpg',
+    imageAlt:'White Mazda Atenza / Mazda6 sedan, front three-quarter view',
     summary:'The Japanese-market Mazda6 flagship in late GJ form, combining the 2.2-litre SKYACTIV-D diesel with a refined cabin and a strong long-distance focus.',
     note:'Japan-market 2018 facelift reference. Atenza is the Japanese name used for the Mazda6 through this period. Exact equipment varies by build date and option pack.',
     groups:{
@@ -49,8 +49,7 @@ cars.push(...[
     },
     sources:[
       ['Mazda Japan — 2018 Atenza product update','https://newsroom.mazda.com/ja/publicity/release/2018/201805/180524a.html'],
-      ['Mazda — Atenza technical dimensions reference','https://newsroom.mazda.com/ja/publicity/release/2016/201608/160825b.pdf'],
-      ['Wikimedia Commons — Atenza XD L Package photo (CC BY-SA 4.0)','https://commons.wikimedia.org/wiki/File:Mazda_ATENZA_SEDAN_XD_L_Package_(3DA-GJ2FP)_front.jpg']
+      ['Mazda — Atenza technical dimensions reference','https://newsroom.mazda.com/ja/publicity/release/2016/201608/160825b.pdf']
     ]
   },
   {
