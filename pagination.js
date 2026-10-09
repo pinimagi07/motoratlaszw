@@ -1,6 +1,7 @@
 /* Motor Atlas catalogue pagination
    Keeps the existing catalogue/filter engine intact and paginates the rendered cards.
-   Desktop/tablet: 12 cars per page. Phones: 8 cars per page. */
+   Desktop/tablet: whole brands, combining small brands up to 12 cars.
+   Phones: existing 8-car numbered pages. */
 (()=>{
   const grid=document.getElementById('grid');
   if(!grid)return;
@@ -17,6 +18,33 @@
 
   const pageSize=()=>window.innerWidth<=767?8:12;
   const cards=()=>[...grid.querySelectorAll('.brand-group .card')];
+  const escapeLabel=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+
+  function buildPages(){
+    const allCards=cards();
+    if(pageSize()===8){
+      return Array.from({length:Math.ceil(allCards.length/8)},(_,i)=>({cards:allCards.slice(i*8,i*8+8),brands:[]}));
+    }
+    const pages=[];
+    let shared=null;
+    for(const group of grid.querySelectorAll('.brand-group')){
+      const groupCards=[...group.querySelectorAll('.card')];
+      if(!groupCards.length)continue;
+      const brand=group.dataset.brandGroup||group.querySelector('h2')?.textContent||'Cars';
+      if(groupCards.length>=12){
+        pages.push({cards:groupCards,brands:[brand]});
+        shared=null;
+      }else{
+        if(!shared||shared.cards.length+groupCards.length>12){
+          shared={cards:[],brands:[]};
+          pages.push(shared);
+        }
+        shared.cards.push(...groupCards);
+        shared.brands.push(brand);
+      }
+    }
+    return pages;
+  }
 
   const pageButtons=(page,total)=>{
     if(total<=7)return Array.from({length:total},(_,i)=>i+1);
@@ -30,15 +58,20 @@
     return out;
   };
 
-  function renderNav(totalCards,perPage,totalPages){
-    if(totalCards<=perPage){nav.hidden=true;nav.innerHTML='';return;}
+  function renderNav(pages){
+    const totalPages=pages.length;
+    if(totalPages<=1){nav.hidden=true;nav.innerHTML='';return;}
     nav.hidden=false;
-    const start=(currentPage-1)*perPage+1;
-    const end=Math.min(currentPage*perPage,totalCards);
-    const controls=pageButtons(currentPage,totalPages).map(item=>item==='…'
+    const phone=pageSize()===8;
+    const totalCards=pages.reduce((sum,page)=>sum+page.cards.length,0);
+    const start=pages.slice(0,currentPage-1).reduce((sum,page)=>sum+page.cards.length,0)+1;
+    const end=start+pages[currentPage-1].cards.length-1;
+    const items=phone?pageButtons(currentPage,totalPages):pages.map((_,i)=>i+1);
+    const controls=items.map(item=>item==='…'
       ? '<span class="page-ellipsis" aria-hidden="true">…</span>'
-      : `<button type="button" data-page="${item}" class="${item===currentPage?'active':''}" ${item===currentPage?'aria-current="page"':''}>${item}</button>`).join('');
-    nav.innerHTML=`<div class="page-status">Showing ${start}–${end} of ${totalCards} cars</div><div class="page-controls"><button type="button" data-page="prev" class="page-arrow" aria-label="Previous page" ${currentPage===1?'disabled':''}>←</button>${controls}<button type="button" data-page="next" class="page-arrow" aria-label="Next page" ${currentPage===totalPages?'disabled':''}>→</button></div>`;
+      : `<button type="button" data-page="${item}" class="${item===currentPage?'active':''}" ${item===currentPage?'aria-current="page"':''}>${phone?item:escapeLabel(pages[item-1].brands.join(' + '))}</button>`).join('');
+    const status=phone?`Showing ${start}–${end} of ${totalCards} cars`:`Page ${currentPage} of ${totalPages} · ${pages[currentPage-1].cards.length} cars · ${escapeLabel(pages[currentPage-1].brands.join(' + '))}`;
+    nav.innerHTML=`<div class="page-status" role="status">${status}</div><div class="page-controls"><button type="button" data-page="prev" class="page-arrow" aria-label="Previous page" ${currentPage===1?'disabled':''}>←</button>${controls}<button type="button" data-page="next" class="page-arrow" aria-label="Next page" ${currentPage===totalPages?'disabled':''}>→</button></div>`;
   }
 
   function apply(reset=false){
@@ -46,19 +79,19 @@
     frame=requestAnimationFrame(()=>{
       const allCards=cards();
       const perPage=pageSize();
-      const totalPages=Math.max(1,Math.ceil(allCards.length/perPage));
+      const pages=buildPages();
+      const totalPages=Math.max(1,pages.length);
       if(reset)currentPage=1;
       currentPage=Math.min(Math.max(currentPage,1),totalPages);
 
-      const first=(currentPage-1)*perPage;
-      const last=first+perPage;
-      allCards.forEach((card,index)=>{card.hidden=index<first||index>=last;});
+      const visible=new Set(pages[currentPage-1]?.cards||[]);
+      allCards.forEach(card=>{card.hidden=!visible.has(card);});
 
       grid.querySelectorAll('.brand-group').forEach(group=>{
         group.hidden=![...group.querySelectorAll('.card')].some(card=>!card.hidden);
       });
 
-      renderNav(allCards.length,perPage,totalPages);
+      renderNav(pages);
       lastPageSize=perPage;
     });
   }
@@ -66,7 +99,7 @@
   nav.addEventListener('click',e=>{
     const button=e.target.closest('button[data-page]');
     if(!button||button.disabled)return;
-    const totalPages=Math.max(1,Math.ceil(cards().length/pageSize()));
+    const totalPages=Math.max(1,buildPages().length);
     const target=button.dataset.page;
     if(target==='prev')currentPage=Math.max(1,currentPage-1);
     else if(target==='next')currentPage=Math.min(totalPages,currentPage+1);
