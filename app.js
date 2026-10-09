@@ -39,7 +39,7 @@ function render(){
   const makes=[...grouped.keys()].sort((a,b)=>a.localeCompare(b));
   $('#grid').innerHTML=makes.map(make=>{
     const items=grouped.get(make);
-    return `<section class="brand-group" data-brand-group="${E(make)}"><div class="brand-group-heading"><div><div class="eyebrow">MANUFACTURER</div><h2>${E(make)}</h2></div><span>${items.length} ${items.length===1?'model':'models'}</span></div><div class="brand-grid">${items.map((c,i)=>cardMarkup(c,i)).join('')}</div></section>`;
+    return `<section class="brand-group" data-brand-group="${E(make)}"><div class="brand-group-heading"><div><div class="eyebrow">MANUFACTURER</div><h2${make==='BMW'?' style="display:flex;align-items:center;gap:16px"':''}>${make==='BMW'?'<img src="assets/logos/bmw.svg" alt="" width="64" height="64" style="width:clamp(44px,5vw,64px);height:auto;flex:none"><span>BMW</span>':E(make)}</h2></div><span>${items.length} ${items.length===1?'model':'models'}</span></div><div class="brand-grid">${items.map((c,i)=>cardMarkup(c,i)).join('')}</div></section>`;
   }).join('');
   $('#count').textContent=`${list.length} ${list.length===1?'car':'cars'} across ${makes.length} ${makes.length===1?'manufacturer':'manufacturers'}`;
   $('#empty').hidden=!!list.length;
