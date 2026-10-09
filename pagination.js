@@ -76,8 +76,15 @@
     if(catalogue)catalogue.scrollIntoView({behavior:'smooth',block:'start'});
   });
 
+  /* Reset to page 1 only when the catalogue itself is re-rendered by filters/search.
+     Card-internal changes such as community ratings must not kick users back to page 1. */
   const observer=new MutationObserver(records=>{
-    if(records.some(record=>record.type==='childList'))apply(true);
+    const structuralChange=records.some(record=>{
+      if(record.type!=='childList')return false;
+      const target=record.target;
+      return target===grid || target?.classList?.contains('brand-grid') || target?.classList?.contains('brand-group');
+    });
+    if(structuralChange)apply(true);
   });
   observer.observe(grid,{childList:true,subtree:true});
 
