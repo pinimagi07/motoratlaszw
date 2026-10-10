@@ -32,6 +32,15 @@ function filtered(){
 
 function cardMarkup(c,i){return `<article class="card" style="--order:${Math.min(i,5)}"><div class="photo"><button class="photo-open" data-detail="${E(c.id)}" aria-label="Explore ${E(c.make+' '+c.model+' '+c.trim)}">${imageMarkup(c)}</button><span class="bodytag">${E(c.type)}</span>${c.rating!=null?`<div class="rating" aria-label="Top Gear rating ${c.rating} out of 10"><b>${c.rating}</b><small> / 10</small><span>TOP GEAR</span></div>`:has3D(c)?'<span class="view-badge">↻ 3D VIEW AVAILABLE</span>':''}</div><div class="cardbody"><div class="modelyear">${E(c.make)} <span> / </span> ${E(c.year)}</div><h2><button class="title-open" data-detail="${E(c.id)}">${E(c.model)}</button></h2><p class="trim">${E(c.trim)}</p><div class="specstrip"><div><span>POWER</span><b>${c.power==null?'Varies by trim':`${c.power} <small>kW</small>`}</b></div><div><span>FUEL</span><b>${E(c.fuel||'See reference')}</b></div><div><span>DRIVETRAIN</span><b>${E(c.drive||'See reference')}</b></div></div><div class="cardactions"><button class="view" data-detail="${E(c.id)}">Explore car ↗</button><label class="compare"><input type="checkbox" data-compare="${E(c.id)}" ${selected.has(c.id)?'checked':''} aria-label="Compare ${E(c.make+' '+c.model+' '+c.trim)}">Compare</label></div></div></article>`;}
 
+const brandLogos={BMW:'bmw',Ford:'ford',Honda:'honda',Isuzu:'isuzu','Land Rover':'landrover',Mazda:'mazda','Mercedes-Benz':'mercedes',Nissan:'nissan',Suzuki:'suzuki',Toyota:'toyota'};
+function brandHeading(make){
+  const logo=brandLogos[make];
+  if(!logo)return `<h2>${E(make)}</h2>`;
+  const width=make==='Isuzu'?'clamp(72px,8vw,104px)':(['Ford','Land Rover'].includes(make)?'clamp(60px,7vw,88px)':'clamp(44px,5vw,64px)');
+  const finish=make==='BMW'?'':'filter:brightness(0) invert(1);opacity:.94;';
+  return `<h2 style="display:flex;align-items:center;gap:clamp(12px,1.3vw,16px);min-width:0"><img src="assets/logos/${logo}.svg" alt="" width="64" height="64" style="width:${width};height:clamp(44px,5vw,64px);object-fit:contain;flex:none;${finish}"><span>${E(make)}</span></h2>`;
+}
+
 function render(){
   const list=filtered();
   const grouped=new Map();
@@ -39,7 +48,7 @@ function render(){
   const makes=[...grouped.keys()].sort((a,b)=>a.localeCompare(b));
   $('#grid').innerHTML=makes.map(make=>{
     const items=grouped.get(make);
-    return `<section class="brand-group" data-brand-group="${E(make)}"><div class="brand-group-heading"><div><div class="eyebrow">MANUFACTURER</div><h2${make==='BMW'?' style="display:flex;align-items:center;gap:16px"':''}>${make==='BMW'?'<img src="assets/logos/bmw.svg" alt="" width="64" height="64" style="width:clamp(44px,5vw,64px);height:auto;flex:none"><span>BMW</span>':E(make)}</h2></div><span>${items.length} ${items.length===1?'model':'models'}</span></div><div class="brand-grid">${items.map((c,i)=>cardMarkup(c,i)).join('')}</div></section>`;
+    return `<section class="brand-group" data-brand-group="${E(make)}"><div class="brand-group-heading"><div><div class="eyebrow">MANUFACTURER</div>${brandHeading(make)}</div><span>${items.length} ${items.length===1?'model':'models'}</span></div><div class="brand-grid">${items.map((c,i)=>cardMarkup(c,i)).join('')}</div></section>`;
   }).join('');
   $('#count').textContent=`${list.length} ${list.length===1?'car':'cars'} across ${makes.length} ${makes.length===1?'manufacturer':'manufacturers'}`;
   $('#empty').hidden=!!list.length;
