@@ -124,6 +124,12 @@
 </style>
 </head>
 <body>
+<div id="atlasWelcome" class="atlas-welcome" aria-hidden="true"><div class="atlas-welcome-inner"><div class="atlas-welcome-mark">M∕</div><div class="atlas-welcome-name">MOTOR ATLAS</div><div class="atlas-welcome-sub">DRIVE A BRIGHTER TOMORROW</div></div></div>
+<script>
+// Present in the first paint; CSS times the full introduction including its fade.
+(()=>{const welcome=document.getElementById('atlasWelcome');if(matchMedia('(prefers-reduced-motion: reduce)').matches){welcome.remove();return;}welcome.addEventListener('animationend',event=>{if(event.target===welcome&&event.animationName==='atlas-welcome-exit')welcome.remove();});})();
+</script>
+
 <header>
   <a class="brand" href="./"><span class="mark">M<span>∕</span></span> MOTOR ATLAS<span class="edition">ZIMBABWE</span></a>
   <nav>

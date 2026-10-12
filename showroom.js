@@ -4,18 +4,6 @@
 (()=>{
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Welcome gesture: once per browser session so repeat visits stay quick.
-  if(!reduced && !sessionStorage.getItem('motorAtlasWelcomeSeen')){
-    const welcome=document.createElement('div');
-    welcome.className='atlas-welcome';
-    welcome.setAttribute('aria-hidden','true');
-    welcome.innerHTML='<div class="atlas-welcome-inner"><div class="atlas-welcome-mark">M∕</div><div class="atlas-welcome-name">MOTOR ATLAS</div><div class="atlas-welcome-sub">DRIVE A BRIGHTER TOMORROW</div></div>';
-    document.body.appendChild(welcome);
-    sessionStorage.setItem('motorAtlasWelcomeSeen','1');
-    setTimeout(()=>welcome.classList.add('hide'),1450);
-    setTimeout(()=>welcome.remove(),2000);
-  }
-
   // Left-side showroom navigation for larger screens.
   const rail=document.createElement('aside');
   rail.className='atlas-rail';
