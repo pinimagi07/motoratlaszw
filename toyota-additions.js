@@ -85,6 +85,12 @@ cars.push(...[
     "summary": "Toyota’s compact hybrid hatchback. This guide separates the original Aqua, launched in 2011, from the redesigned model introduced in 2021.",
     "note": "No year or trim was specified, so this is a model-family guide. Do not apply one generation’s power, economy or equipment to every Aqua. Photo shows a first-generation Aqua S with options. Later facelifts and special grades may differ from these launch references.",
     "groups": {
+      "Model-family overview": {
+        "Power": "Varies by generation and trim",
+        "Torque": "See separate engine and motor figures below",
+        "Drive": "FWD; E-Four available from the second generation",
+        "Engine": "1.5-litre petrol hybrid; engine design varies"
+      },
       "First generation — 2011 launch reference": {
         "Engine": "1,496 cc 1NZ-FXE petrol hybrid",
         "Engine output": "54 kW at 4,800 rpm",
